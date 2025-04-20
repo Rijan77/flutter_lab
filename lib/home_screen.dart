@@ -10,21 +10,28 @@ class CounterPage extends ConsumerWidget {
   });
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final counter = ref.watch(counterProvider); // watch the counter state
-
+  Widget build(BuildContext context, WidgetRef ref) {// watch the counter state
+    print("Build1");
     return Scaffold(
       appBar: AppBar(
         title: const Text('Riverpod Counter App'),
       ),
+
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Count: $counter',
-              style: const TextStyle(fontSize: 30),
-            ),
+            Consumer(builder: (context, ref, child){
+              final counter = ref.watch(counterProvider);
+              print("Build 3");
+              return Center(
+                child:
+                  Text("Count: $counter")
+              );
+
+            }),
+
+
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
