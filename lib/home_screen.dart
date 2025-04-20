@@ -8,6 +8,10 @@ class CounterPage extends ConsumerWidget {
   final counterProvider = StateProvider<int>((ref){
     return 0;
   });
+  
+  final switchProvider = StateProvider<bool>((ref){
+    return false;
+});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {// watch the counter state
@@ -29,6 +33,15 @@ class CounterPage extends ConsumerWidget {
                   Text("Count: $counter")
               );
 
+            }),
+            
+            Consumer(builder: (context, ref, chiild){
+              final counter = ref.watch(switchProvider);
+              print("Build5");
+              
+              return Switch(value: counter, onChanged: (value){
+                ref.read(switchProvider.notifier).state = value;
+              });
             }),
 
 
