@@ -21,13 +21,13 @@ class _HomepageState  extends ConsumerState<Homepage>{
     final taskList = ref.watch(taskListProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text("TODO APP")), backgroundColor: Colors.black26,),
+      appBar: AppBar(title: const Center(child: Text("TODO APP")), backgroundColor: Colors.black26,),
       backgroundColor: Colors.grey.shade300,
       
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(30.0),
+          const Padding(
+            padding: EdgeInsets.all(30.0),
             child: Text("Tasks List", style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold
@@ -47,8 +47,8 @@ class _HomepageState  extends ConsumerState<Homepage>{
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 20, left: 10),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 20, left: 10),
                             child: Text("Daily Task", style: TextStyle(
                               fontWeight: FontWeight.w700,
                               fontSize: 15
@@ -60,24 +60,24 @@ class _HomepageState  extends ConsumerState<Homepage>{
                             child: FloatingActionButton.small(onPressed: (){
                               showModalBottomSheet(context: context,
                                   isScrollControlled: true,
-                                  shape: RoundedRectangleBorder(
+                                  shape: const RoundedRectangleBorder(
                                     borderRadius: BorderRadius.vertical(top: Radius.circular(20))
                                   ),
-                                  builder: (context)=>Addtask());
+                                  builder: (context)=>const Addtask());
 
-                            }, child: Icon(Icons.add),),
+                            }, child: const Icon(Icons.add),),
                           ),
                         ],
                       ),
-                      Divider(thickness: 2, color: Colors.black54,),
+                      const Divider(thickness: 2, color: Colors.black54,),
 
                       Expanded(child: taskList.isEmpty
-                          ? Center(child: Text('No Tasks yet'))
+                          ? const Center(child: Text('No Tasks yet'))
                           :ListView.builder(
                           itemCount: taskList.length,
                           itemBuilder: (context, index){
                             return ListTile(
-                              leading: Icon (Icons.check_circle_outline),
+                              leading: const Icon (Icons.check_circle_outline),
                               title: Text(taskList[index]),
                             );
                       })

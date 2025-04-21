@@ -30,17 +30,17 @@ final _formKey = GlobalKey<FormState>();
              mainAxisAlignment: MainAxisAlignment.end,
 
              children: [
-               Text("Add Task", style:
+               const Text("Add Task", style:
                  TextStyle(
                    fontSize: 20, fontWeight: FontWeight.bold
                  ),
                ),
                TextFormField(
-                 decoration: InputDecoration(labelText: "Item Name"),
+                 decoration: const InputDecoration(labelText: "Item Name"),
                  onSaved: (value)=> _itemName= value,
                  validator: (value)=>value==null || value.isEmpty? "Please enter item name": null,
                ),
-               SizedBox(height: 20,),
+               const SizedBox(height: 20,),
                ElevatedButton(onPressed: (){
                  if (_formKey.currentState!.validate()){
                    _formKey.currentState!.save();
@@ -53,7 +53,7 @@ final _formKey = GlobalKey<FormState>();
                    Navigator.pop(context);
                    print("Item added: $_itemName");
                  }
-               }, child: Text("Save"))
+               }, child: const Text("Save"))
              ],
            ),
          ),
