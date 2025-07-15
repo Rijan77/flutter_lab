@@ -22,7 +22,7 @@ class _InterviewEgoState extends State<InterviewEgo> {
       });
 
     }else{
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Reached into the end")));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Reached into the end")));
     }
 
   }
@@ -49,7 +49,7 @@ class _InterviewEgoState extends State<InterviewEgo> {
 
             Text(
               myList[currentIndex].toString(),
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
                 color: Colors.black
@@ -57,7 +57,7 @@ class _InterviewEgoState extends State<InterviewEgo> {
             ),
 
 
-            ElevatedButton(onPressed: enterList, child: Text("Enter"))
+            ElevatedButton(onPressed: enterList, child: const Text("Enter"))
           ],
         ),
       ),

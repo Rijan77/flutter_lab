@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_state/home_screen.dart';
 
-import 'interview_ego.dart';
+import 'practice/interview_ego.dart';
 
 
 void main() {
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:  InterviewEgo(),
+        home:  const InterviewEgo(),
       ),
     );
   }
