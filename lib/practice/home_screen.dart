@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
@@ -32,10 +34,19 @@ class CounterPage extends ConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TimerCountdown(
-              format: CountDownTimerFormat.minutesSeconds,
-              endTime: endTime,
-              onEnd: () => print("Timer Finished on Page 2"),
+            Container(
+              width: 200,
+              height: 100,
+              color: Colors.blueGrey,
+              child: Center(
+                child: TimerCountdown(
+                  timeTextStyle: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                  descriptionTextStyle: TextStyle(color: Colors.white),
+                  colonsTextStyle: TextStyle(color: Colors.white),
+                  format: CountDownTimerFormat.minutesSeconds,
+                  endTime: endTime,
+                ),
+              ),
             ),
           ],
         ),

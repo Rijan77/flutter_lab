@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
 import 'package:riverpod_state/practice/homepage.dart';
@@ -24,12 +25,22 @@ class _TimerDisplayPageState extends State<TimerDisplayPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TimerCountdown(
-                format: CountDownTimerFormat.minutesSeconds,
-                onEnd: () {
-                  print("Timer finished");
-                },
-                endTime: sharedEndTime),
+            Container(
+              width: 200,
+              height: 100,
+              color: Colors.blueGrey,
+              child: Center(
+                child: TimerCountdown(
+                    timeTextStyle: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                    descriptionTextStyle: TextStyle(color: Colors.white),
+                    colonsTextStyle: TextStyle(color: Colors.white),
+                    format: CountDownTimerFormat.minutesSeconds,
+                    onEnd: () {
+                    exit(0);
+                    },
+                    endTime: sharedEndTime),
+              ),
+            ),
 
             SizedBox(
               height: 50,
