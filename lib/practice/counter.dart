@@ -57,7 +57,7 @@ Widget _buildTop() {
         Stack(
           children: [
             Container(
-              color: Color(0xff13366E),
+              color: const Color(0xff13366E),
               width: double.infinity,
               height: 180,
             ),
@@ -71,7 +71,7 @@ Widget _buildTop() {
                     color: Colors.white,
                   ),
 
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
 
@@ -80,7 +80,7 @@ Widget _buildTop() {
                     width: 50,
                     color: Colors.white,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Container(
