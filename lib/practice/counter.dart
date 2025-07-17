@@ -30,6 +30,7 @@ class _TimerDisplayPageState extends State<TimerDisplayPage> {
                   print("Timer finished");
                 },
                 endTime: sharedEndTime),
+
             SizedBox(
               height: 50,
             ),
