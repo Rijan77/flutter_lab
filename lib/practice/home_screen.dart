@@ -40,7 +40,10 @@ class CounterPage extends ConsumerWidget {
               color: Colors.blueGrey,
               child: Center(
                 child: TimerCountdown(
-                  timeTextStyle: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                  timeTextStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
                   descriptionTextStyle: TextStyle(color: Colors.white),
                   colonsTextStyle: TextStyle(color: Colors.white),
                   format: CountDownTimerFormat.minutesSeconds,

@@ -31,17 +31,19 @@ class _TimerDisplayPageState extends State<TimerDisplayPage> {
               color: Colors.blueGrey,
               child: Center(
                 child: TimerCountdown(
-                    timeTextStyle: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                    timeTextStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
                     descriptionTextStyle: TextStyle(color: Colors.white),
                     colonsTextStyle: TextStyle(color: Colors.white),
                     format: CountDownTimerFormat.minutesSeconds,
                     onEnd: () {
-                    exit(0);
+                      exit(0);
                     },
                     endTime: sharedEndTime),
               ),
             ),
-
             SizedBox(
               height: 50,
             ),
