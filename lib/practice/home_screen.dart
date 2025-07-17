@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -27,8 +26,8 @@ class CounterPage extends ConsumerWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.arrow_back_sharp)),
-        title: Center(child: Text("Helo Timer")),
+            icon: const Icon(Icons.arrow_back_sharp)),
+        title: const Center(child: Text("Helo Timer")),
       ),
       body: Center(
         child: Column(
@@ -40,12 +39,12 @@ class CounterPage extends ConsumerWidget {
               color: Colors.blueGrey,
               child: Center(
                 child: TimerCountdown(
-                  timeTextStyle: TextStyle(
+                  timeTextStyle: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold),
-                  descriptionTextStyle: TextStyle(color: Colors.white),
-                  colonsTextStyle: TextStyle(color: Colors.white),
+                  descriptionTextStyle: const TextStyle(color: Colors.white),
+                  colonsTextStyle: const TextStyle(color: Colors.white),
                   format: CountDownTimerFormat.minutesSeconds,
                   endTime: endTime,
                 ),

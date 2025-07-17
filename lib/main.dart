@@ -10,7 +10,7 @@ void main() {
 class MyApp extends StatelessWidget {
    MyApp({super.key});
 
-  final DateTime sharedEndTime = DateTime.now().add(Duration(minutes: 10));
+  final DateTime sharedEndTime = DateTime.now().add(const Duration(minutes: 10));
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

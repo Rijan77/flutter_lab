@@ -1,22 +1,20 @@
-import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
-import 'package:riverpod_state/practice/homepage.dart';
 
 import 'home_screen.dart';
 
 class TimerDisplayPage extends StatefulWidget {
   final DateTime endTime;
 
-  TimerDisplayPage({super.key, required this.endTime});
+  const TimerDisplayPage({super.key, required this.endTime});
 
   @override
   _TimerDisplayPageState createState() => _TimerDisplayPageState();
 }
 
 class _TimerDisplayPageState extends State<TimerDisplayPage> {
-  final DateTime sharedEndTime = DateTime.now().add(Duration(minutes: 10));
+  final DateTime sharedEndTime = DateTime.now().add(const Duration(minutes: 10));
 
   @override
   Widget build(BuildContext context) {
@@ -31,12 +29,12 @@ class _TimerDisplayPageState extends State<TimerDisplayPage> {
               color: Colors.blueGrey,
               child: Center(
                 child: TimerCountdown(
-                    timeTextStyle: TextStyle(
+                    timeTextStyle: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
-                    descriptionTextStyle: TextStyle(color: Colors.white),
-                    colonsTextStyle: TextStyle(color: Colors.white),
+                    descriptionTextStyle: const TextStyle(color: Colors.white),
+                    colonsTextStyle: const TextStyle(color: Colors.white),
                     format: CountDownTimerFormat.minutesSeconds,
                     onEnd: () {
                       exit(0);
@@ -44,7 +42,7 @@ class _TimerDisplayPageState extends State<TimerDisplayPage> {
                     endTime: sharedEndTime),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             ElevatedButton(
@@ -55,7 +53,7 @@ class _TimerDisplayPageState extends State<TimerDisplayPage> {
                         builder: (_) => CounterPage(endTime: sharedEndTime),
                       ));
                 },
-                child: Text("Next Page"))
+                child: const Text("Next Page"))
           ],
         ),
       ),
