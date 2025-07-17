@@ -4,13 +4,13 @@ import 'package:riverpod_state/practice/counter.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   MyApp({super.key});
 
-
+  final DateTime sharedEndTime = DateTime.now().add(Duration(minutes: 10));
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:  const Counter(),
+        home:   TimerDisplayPage(endTime: sharedEndTime,),
       ),
     );
   }
