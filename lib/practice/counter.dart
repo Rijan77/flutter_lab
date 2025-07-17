@@ -70,11 +70,9 @@ Widget _buildTop() {
                     width: 50,
                     color: Colors.white,
                   ),
-
                   const SizedBox(
                     width: 10,
                   ),
-
                   Container(
                     height: 50,
                     width: 50,
