@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_state/practice/counter.dart';
 
 import 'practice/interview_ego.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const InterviewEgo(),
+        home:  Counter(),
       ),
     );
   }
