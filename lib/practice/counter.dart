@@ -14,7 +14,8 @@ class TimerDisplayPage extends StatefulWidget {
 }
 
 class _TimerDisplayPageState extends State<TimerDisplayPage> {
-  final DateTime sharedEndTime = DateTime.now().add(const Duration(minutes: 10));
+  final DateTime sharedEndTime = DateTime.now().add(
+      const Duration(minutes: 10));
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +54,7 @@ class _TimerDisplayPageState extends State<TimerDisplayPage> {
                         builder: (_) => CounterPage(endTime: sharedEndTime),
                       ));
                 },
+
                 child: const Text("Next Page"))
           ],
         ),
