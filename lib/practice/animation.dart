@@ -8,7 +8,7 @@ class AnimationTry extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(
+        child: const Text(
           "Hello Rijan",
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         )
