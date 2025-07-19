@@ -38,6 +38,7 @@ dependencies:
   riverpod:
   flutter_timer_countdown:
   flutter_riverpod:
+  flutter_animate: ^4.5.2
 
 dev_dependencies:
   flutter_test:
