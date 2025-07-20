@@ -5,7 +5,8 @@ class AppLifecycle extends StatefulWidget {
   _AppLifecycleState createState() => _AppLifecycleState();
 }
 
-class _AppLifecycleState extends State<AppLifecycle> with WidgetsBindingObserver {
+class _AppLifecycleState extends State<AppLifecycle>
+    with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
