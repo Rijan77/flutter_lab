@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppLifecycle extends StatefulWidget {
+  const AppLifecycle({super.key});
+
   @override
   _AppLifecycleState createState() => _AppLifecycleState();
 }
@@ -34,8 +36,8 @@ class _AppLifecycleState extends State<AppLifecycle>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Lifecycle Example")),
-      body: Center(child: Text("Watch console for lifecycle changes")),
+      appBar: AppBar(title: const Text("Lifecycle Example")),
+      body: const Center(child: Text("Watch console for lifecycle changes")),
     );
   }
 }
